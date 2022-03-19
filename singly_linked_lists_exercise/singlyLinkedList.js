@@ -160,22 +160,20 @@ SinglyLinkedList.prototype.pop = function () {
 };
 
 SinglyLinkedList.prototype.reverse = function () {
-  let node = this.head;
-  let previousNode = null;
-
-  this.tail = this.head;
-
-  while (node) {
-    let tempNode = node.next;
-
-    node.next = previousNode;
-
-    previousNode = node;
-
-    node = tempNode;
+  if (this.length === 1) {
+    return this;
   }
 
-  this.head = previousNode;
+  // let current = this.head;
+  // let previous = null;
+
+  // while (current) {
+  //   let nextNode = current.next;
+  //   current.next = previous;
+  //   nextNode = current;
+  // }
+  // this.tail = this.head;
+  // return this;
 };
 
 
